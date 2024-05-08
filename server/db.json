@@ -1,0 +1,84 @@
+{
+  "camiones": [
+    {
+      "id": 1,
+      "placa": "ABC123",
+      "modelo": "Camión Modelo 1",
+      "motor": "Motor Tipo A",
+      "anio_fabricacion": 2022,
+      "kilometraje": 50000
+    },
+    {
+      "id": 2,
+      "placa": "DEF456",
+      "modelo": "Camión Modelo 2",
+      "motor": "Motor Tipo B",
+      "anio_fabricacion": 2020,
+      "kilometraje": 75000
+    },
+    {
+      "id": 3,
+      "placa": "GHI789",
+      "modelo": "Camión Modelo 3",
+      "motor": "Motor Tipo C",
+      "anio_fabricacion": 2021,
+      "kilometraje": 60000
+    },
+    {
+      "id": 4,
+      "placa": "JKL012",
+      "modelo": "Camión Modelo 4",
+      "motor": "Motor Tipo D",
+      "anio_fabricacion": 2019,
+      "kilometraje": 90000
+    },
+    {
+      "id": 5,
+      "placa": "MNO345",
+      "modelo": "Camión Modelo 5",
+      "motor": "Motor Tipo E",
+      "anio_fabricacion": 2023,
+      "kilometraje": 40000
+    },
+    {
+      "id": 6,
+      "placa": "PQR678",
+      "modelo": "Camión Modelo 6",
+      "motor": "Motor Tipo F",
+      "anio_fabricacion": 2018,
+      "kilometraje": 100000
+    },
+    {
+      "id": 7,
+      "placa": "STU901",
+      "modelo": "Camión Modelo 7",
+      "motor": "Motor Tipo G",
+      "anio_fabricacion": 2020,
+      "kilometraje": 80000
+    },
+    {
+      "id": 8,
+      "placa": "VWX234",
+      "modelo": "Camión Modelo 8",
+      "motor": "Motor Tipo H",
+      "anio_fabricacion": 2021,
+      "kilometraje": 55000
+    },
+    {
+      "id": 9,
+      "placa": "YZA567",
+      "modelo": "Camión Modelo 9",
+      "motor": "Motor Tipo I",
+      "anio_fabricacion": 2019,
+      "kilometraje": 95000
+    },
+    {
+      "id": 10,
+      "placa": "BCD890",
+      "modelo": "Camión Modelo 10",
+      "motor": "Motor Tipo J",
+      "anio_fabricacion": 2024,
+      "kilometraje": 30000
+    }
+  ]
+}
