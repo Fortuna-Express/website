@@ -5,8 +5,8 @@ import TableComponent from "../fortuna/components/table-component.vue";
 const router= createRouter({
     history: createWebHistory(),
     routes: [
-        { path: '/home', component: HomeComponent, meta: { title: 'Home'}},
-        { path: '/trucks', component: TableComponent, meta: { title: 'Trucks'}},
+        { path: '/monitoring', component: HomeComponent, meta: { title: 'Home'}},
+        { path: '/admin', component: TableComponent, meta: { title: 'Trucks'}},
 
     ]
 });

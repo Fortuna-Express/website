@@ -108,20 +108,6 @@ export default {
 </script>
 <template>
   <h1>FORTUNA TRUCK DESCRIPTIONS</h1>
-  <!-- <div class="table-container">
-     <pv-data-table :value="trucks">
-       <pv-column v-for="(value, name) in trucks[0]" :key="name" :field="name" :header="name"></pv-column>
-     </pv-data-table>
-   </div>-->
-
-  <div class="truck-card" v-for="truck in trucks" :key="truck.id">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9x2yKeBvWjJ-9LiJd0q1Z9t_Gryq860kW-J-0w-AZg&s" alt="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSA9x2yKeBvWjJ-9LiJd0q1Z9t_Gryq860kW-J-0w-AZg&s">
-    <h2>ID:{{ truck.id }}</h2>
-    <p>Placa: {{ truck.placa }} </p>
-    <p>Motor: {{ truck.motor }} </p>
-    <p>Kilometraje: {{ truck.kilometraje }} </p>
-    <p>Año: {{ truck. anio_fabricacion}}</p>
-  </div>
 
 
 </template>

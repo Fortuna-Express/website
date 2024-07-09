@@ -1,5 +1,6 @@
 import { createApp } from 'vue'
 import './style.css'
+import 'tailwindcss/tailwind.css';
 import App from './app.vue'
 // PrimeVue
 import PrimeVue from "primevue/config";

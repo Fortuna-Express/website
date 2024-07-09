@@ -1,49 +1,59 @@
-<script>
-export default {
-  name: "home-component"
-}
-</script>
-
 <template>
-  <div class="textcomplete">
-    <h1>Fortuna Express</h1>
-    <p>
-      Somos una empresa peruana dedicada al comercio de transporte de trailers a nivel nacional. Nuestra misión es brindar un servicio de transporte seguro, eficiente y confiable para satisfacer las necesidades logísticas de nuestros clientes en todo el país.
-      Contamos con una flota moderna de trailers equipados con la última tecnología y un equipo de conductores capacitados para garantizar la entrega oportuna de la carga.
-    </p>
+  <div class="container">
+    <div class="red-border">
+      <img src="../../assets/gps.svg" alt="GPS Logo" class="logo" style="border-radius: 15px; margin-top: 20%;">
+      <p class="title">GPS</p>
+    </div>
+    <div class="red-border">
+      <img src="../../assets/liquidations.png" alt="Liquidations Logo" class="logo">
+      <p class="title">Liquidations</p>
+    </div>
+    <div class="red-border">
+      <img src="../../assets/sunat.png" alt="SUNAT Logo" class="logo">
+      <p class="title">SUNAT</p>
+    </div>
   </div>
 </template>
 
 <style scoped>
-.textcomplete{
-  text-align: justify;
-  margin: auto;
-  width: 50%; /* Ajusta este valor según tus necesidades */
-}
-.flex-columnx{
-  margin-right:50px;
-}
-img{
-  width: 900%;
-  height: 70px;
-  margin-left: 10px;
-  margin-right: 10px;
-}
-.p-button-text{
-  background-color: #d51414;
-  margin-right:-10px;
-  color: white;
-  width:50%
-
-}
-.separated-button {
-  margin: 10px;
+.container {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: flex-start; /* Alinea los elementos arriba */
+  height: 80vh;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.active-tab {
-  color: #c61818;
-  background-color:white ;
-
+.red-border {
+  width: 250px; /* Ancho un poco más grande */
+  height: 280px; /* Altura un poco menos larga */
+  padding: 20px;
+  border: 5px solid #c30505;
+  box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Alinea el contenido al inicio del contenedor */
+  align-items: center;
+  margin: 10px; /* Separación entre los cuadros */
+  border-radius: 8px; /* Hace que solo las puntas sean redondas */
+  transition: transform 0.3s; /* Agrega una transición suave */
 }
 
+.red-border:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del elemento al pasar el mouse */
+}
+
+.logo {
+  width: 80%; /* Tamaño reducido para las imágenes */
+  height: auto;
+  max-width: 100%; /* Ajuste para asegurar el tamaño máximo */
+}
+
+.title {
+  margin-top: auto; /* Empuja el título hacia el final del contenedor */
+  font-size: 20px; /* Tamaño del texto del título */
+  font-weight: bold; /* Texto en negrita */
+}
 </style>

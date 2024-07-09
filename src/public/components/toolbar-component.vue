@@ -1,90 +1,150 @@
+<template>
+  <div class="toolbar-container">
+    <!-- Logo -->
+    <div class="logo-container">
+      <img src="/assets/fort.png" alt="Fortuna Express S.A.C Logo" class="logo">
+    </div>
+
+    <!-- Botón de menú hamburguesa -->
+    <button @click="isNavOpen = !isNavOpen" class="hamburger-button md:hidden">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- Enlaces de navegación -->
+    <div :class="{ 'nav-open': isNavOpen }" class="nav-links md:flex md:space-x-4">
+      <router-link
+          v-for="(item, index) in items"
+          :key="index"
+          :to="item.to"
+          class="toolbar-link"
+          @click.native="closeNav"
+      >
+        {{ item.label }}
+        <span></span>
+      </router-link>
+    </div>
+  </div>
+</template>
 <script>
 export default {
-  name: "toolbar-component",
+  name: "ToolbarComponent",
   data() {
     return {
-      drawer: false,
-      items:[
-        {label: "Home", to: "/home"},
-        {label: "Trucks", to: "/trucks"},
+      isNavOpen: false,
+      items: [
+        { label: "MONITORING", to: "/monitoring" },
+        { label: "ADMIN", to: "/admin" },
       ],
-      sidebarItems: [
-        {label: "Home", to: "/home"},
-        {label: "Trucks", to: "/trucks"},
-      ],
-
-
-    }
+    };
   },
   methods: {
-    toggleDrawer() {
-      this.drawer = !this.drawer;
-    }
-  }
-
-
-}
+    closeNav() {
+      this.isNavOpen = false;
+    },
+  },
+};
 </script>
 
-<template>
-
-  <pv-toolbar class="red">
-    <template #start>
-      <pv-button class="p-button-text text-white" icon="pi pi-bars" @click="toggleDrawer"/>
-      <img src="../../assets/fort.png" alt="Truck Management">
-
-    </template>
-    <template #end>
-      <div class="flex-columnx">
-        <router-link to="/home" class="boton1" >Home</router-link>
-        <router-link to="/trucks" class="boton2" >Trucks</router-link>
-      </div>
-    </template>
-  </pv-toolbar>
-
-  <pv-sidebar v-model:visible="drawer">
-    <router-link v-for="item in sidebarItems" :key="item.label" v-slot="{navigate, href}" :to="item.to" custom>
-      <pv-button :href="href" class="p-button-text separated-button" @click="navigate">{{ item.label }}</pv-button>
-    </router-link>
-  </pv-sidebar>
-
-
-
-
-</template>
-
 <style scoped>
-.flex-columnx{
-  margin-right:50px;
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px 20px;
 }
-img{
-  width: 900%;
+
+.logo {
   height: 70px;
-  margin-left: 10px;
+}
+
+.hamburger-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.hamburger-button span {
+  width: 2rem;
+  height: 0.25rem;
+  background: #cc0000;
+  border-radius: 10px;
+  transition: all 0.3s linear;
+  position: relative;
+  transform-origin: 1px;
+}
+
+.nav-links {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(251, 251, 251, 3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-right: 10px;
 }
-.p-button-text{
-  background-color: #d51414;
-  margin-right:-10px;
-  color: white;
-  width:25%
 
-}
- .separated-button {
-   margin: 10px;
- }
-
-.boton1 {
-  color: #c61818;
-  background-color:white ;
-  margin-right:50px;
-
-}
-.boton2{
-  color: #c61818;
-  background-color:white ;
-  margin-right:50px;
-
+.nav-links.nav-open {
+  transform: translateX(0);
 }
 
+@media screen and (min-width: 768px) {
+  .hamburger-button {
+    display: none;
+  }
+
+  .nav-links {
+    position: static;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    transform: translateX(0);
+  }
+}
+
+.toolbar-link {
+  position: relative;
+  padding: 8px 10px;
+  text-decoration: none;
+  font-weight: bold;
+  color: #000000;
+}
+
+.toolbar-link:hover {
+  color: #b30909; /* Color del texto al pasar el cursor */
+}
+
+.toolbar-link span {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.5px; /* Grosor del subrayado */
+  background-color: transparent; /* Color inicial del subrayado */
+  transition: background-color 0.3s ease; /* Transición suave del color */
+}
+
+.toolbar-link:hover span {
+  background-color: #b30909; /* Color del subrayado al pasar el cursor */
+}
 </style>
