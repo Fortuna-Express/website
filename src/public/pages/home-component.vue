@@ -1,15 +1,20 @@
 <template>
   <div class="container">
     <div class="red-border">
-      <img src="../../assets/gps.svg" alt="GPS Logo" class="logo" style="border-radius: 15px; margin-top: 20%;">
+      <img src="../../../assets/gps.svg" alt="GPS Logo" class="logo" style="border-radius: 15px; margin-top: 20%;">
       <p class="title">GPS</p>
+
+      <div class="flex justify-between mt-4 gap-4">
+        <a href="https://cloud.securitasfleet.com/visitor/bf71a8a1-7196-4d64-bbad-83fc2bac76d2/assets" target="_blank" class="btn btn-primary">B7A-714</a>
+        <a href="https://cloud.securitasfleet.com/visitor/317bdd31-6e48-4d71-b5f9-d273767ffffb/assets" target="_blank" class="btn btn-primary">C3W-837</a>
+      </div>
     </div>
     <div class="red-border">
-      <img src="../../assets/liquidations.png" alt="Liquidations Logo" class="logo">
+      <img src="../../../assets/liquidations.png" alt="Liquidations Logo" class="logo">
       <p class="title">Liquidations</p>
     </div>
     <div class="red-border">
-      <img src="../../assets/sunat.png" alt="SUNAT Logo" class="logo">
+      <img src="../../../assets/sunat.png" alt="SUNAT Logo" class="logo">
       <p class="title">SUNAT</p>
     </div>
   </div>
