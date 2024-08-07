@@ -10,7 +10,7 @@ const router= createRouter({
         { path: '/admin', component: HomeComponent, meta: { title: 'Trucks' } },
         { path: '/:pathMatch(.*)*', redirect: '/monitoring' },
         { path: '/liquidations', component: TableComponent, meta: { title: 'Trucks' } },
-        { path: '/liquidation/1', component: LiquidationView, meta: { title: 'Trucks' } },
+        { path: '/liquidation', component: LiquidationView, meta: { title: 'Trucks' } },
 
     ]
 });

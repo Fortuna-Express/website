@@ -1,6 +1,6 @@
 <template>
   <h1 class="px-6 text-3xl font-bold mt-4 text-center lg:text-left" >LIQUIDACIÓN</h1>
-    <form @submit.prevent="submitForm" class="container mx-auto">
+    <form @submit.prevent="submitForm" class="mx-auto">
       <div class="sm:flex sm:justify-center sm:items-center px-6 mt-5 border-2 border-red-700 rounded-md p-4">
 
       <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4">
@@ -103,10 +103,28 @@
       </div>
 
     </form>
+    <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Total</h2>
+    <div class="sm:flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4 mx-auto">
+    <div class="mt-4">
+    <div class="flex flex-col space-y-2">
+      <div class="flex justify-between items-center">
+        <span class="font-medium text-gray-600 ml-2">GASTO TOTAL</span>
+        <span id="net-amount" class="font-bold text-gray-800 text-2xl">{{ calculateNetAmount() }}</span>
+      </div>
     
+    </div>
+    <div class="flex flex-col mt-5">
+    <div class="flex justify-between items-center">
+        <span class="font-medium text-gray-600  ml-2">LIQUIDO POR VIAJE</span>
+        <span id="net-amount" class="font-bold text-gray-800 ml-4 text-2xl">{{ calculateNetAmount() }}</span>
+      </div>
+  </div>
+</div>
+
+</div>
     <!-- Botón de enviar -->
     <div class="flex justify-center mt-6">
-        <button type="submit" class="btn-primary">Enviar</button>
+        <button type="submitForm" class="btn-primary">Enviar</button>
       </div>
 </template>
 <script>
@@ -148,11 +166,13 @@ export default {
       // Aquí puedes manejar la lógica para enviar los datos del formulario
       console.log(this.formData);
       // Redirigir a la ruta después de enviar el formulario
-      this.$router.push('/liquidation/1');
+      this.$router.push('/liquidation');
     },
     calculateNetAmount() {
-      // Implementar la lógica de cálculo del líquido por viaje
-      return '$/180.00';
+      const { fuel, tarpaulin, sweeper, driverPay, guard, freight,expenses } = this.formData;
+      const totalExpenses = [fuel, tarpaulin, sweeper, driverPay, guard, freight,expenses].reduce((sum, value) => sum + (parseFloat(value) || 0), 0);
+
+      return totalExpenses.toFixed(2); // Ajusta la cantidad de decimales si es necesario
     },
     calculateNetAmountLabel() {
       return 'LÍQUIDO POR VIAJE';

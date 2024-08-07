@@ -1,116 +1,122 @@
 <template>
-  <div class="liquidation-container">
-    <div class="header">
-      <h1>LIQUIDACION</h1>
-      <span class="info-value text-align-center">{{ fakeData.date }}</span>
+  <div class="max-w-[900px] mx-auto p-4 bg-white rounded-lg font-sans shadow-md">
+    <div class="text-center mb-4">
+      <h1 class="text-xl font-semibold text-gray-800 mb-1">LIQUIDACIÓN</h1>
+      <span class="text-gray-600 text-sm">{{ fakeData.date }}</span>
     </div>
-    <section>
-      <h2>Información Requerida </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Información Requerida -->
+      <div class="p-4 border border-gray-200 rounded-md shadow-sm">
+        <h2 class="text-lg font-semibold text-gray-700 border-b border-gray-300 pb-1 mb-2">Información Requerida</h2>
+        <div class="space-y-1 text-sm">
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Nº Factura:</span>
+            <span class="text-gray-600">{{ fakeData.factura }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Nº G. Remisión:</span>
+            <span class="text-gray-600">{{ fakeData.remission }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Nº G. Transportista:</span>
+            <span class="text-gray-600">{{ fakeData.transportGuide }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Nº G. Transportista 2:</span>
+            <span class="text-gray-600">{{ fakeData.transport2Guide }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Vehículo:</span>
+            <span class="text-gray-600">{{ fakeData.vehicle }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Conductor:</span>
+            <span class="text-gray-600">{{ fakeData.driver }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Fecha:</span>
+            <span class="text-gray-600">{{ fakeData.date }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Salida:</span>
+            <span class="text-gray-600">{{ fakeData.departure }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Llegada:</span>
+            <span class="text-gray-600">{{ fakeData.arrival }}</span>
+          </div>
+        </div>
+      </div>
 
-      <div class="info-section">
-        <div class="info-item">
-          <span class="info-label">Nº Factura:</span>
-          <span class="info-value">{{ fakeData.factura}}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Nº G. Remisión:</span>
-          <span class="info-value">{{ fakeData.remission }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Nº G. Transportista:</span>
-          <span class="info-value">{{ fakeData.transportGuide }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Nº G. Transportista 2:</span>
-          <span class="info-value">{{ fakeData.transport2Guide }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Vehículo:</span>
-          <span class="info-value">{{ fakeData.vehicle }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Conductor:</span>
-          <span class="info-value">{{ fakeData.driver }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Fecha:</span>
-          <span class="info-value">{{ fakeData.date }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Salida:</span>
-          <span class="info-value">{{ fakeData.departure }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Llegada:</span>
-          <span class="info-value">{{ fakeData.arrival }}</span>
+      <!-- Datos Complementarios -->
+      <div class="p-4 border border-gray-200 rounded-md shadow-sm">
+        <h2 class="text-lg font-semibold text-gray-700 border-b border-gray-300 pb-1 mb-2">Datos Complementarios</h2>
+        <div class="space-y-1 text-sm">
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Combustible:</span>
+            <span class="text-gray-600">{{ fakeData.fuel }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Encarpar/Dsc:</span>
+            <span class="text-gray-600">{{ fakeData.tarpaulin }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Barrendero:</span>
+            <span class="text-gray-600">{{ fakeData.sweeper }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Conductor-Pay:</span>
+            <span class="text-gray-600">{{ fakeData.driverPay }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Guardianía:</span>
+            <span class="text-gray-600">{{ fakeData.guard }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Flete:</span>
+            <span class="text-gray-600">{{ fakeData.freight }}</span>
+          </div>
         </div>
       </div>
 
-    </section>
-
-    <section>
-      <h2>Datos Complementarios</h2>
-      <div class="info-section">
-        <div class="info-item">
-          <span class="info-label">Combustible:</span>
-          <span class="info-value">{{ fakeData.fuel }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Encarpar/Dsc:</span>
-          <span class="info-value">{{ fakeData.tarpaulin }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Barrendero:</span>
-          <span class="info-value">{{ fakeData.sweeper }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Conductor-Pay:</span>
-          <span class="info-value">{{ fakeData.driverPay }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Guardianía:</span>
-          <span class="info-value">{{ fakeData.guard }}</span>
-        </div>
-        <div class="info-item">
-          <span class="info-label">Flete:</span>
-          <span class="info-value">{{ fakeData.freight }}</span>
+      <!-- Adicional -->
+      <div class="p-4 border border-gray-200 rounded-md shadow-sm">
+        <h2 class="text-lg font-semibold text-gray-700 border-b border-gray-300 pb-1 mb-2">Adicional</h2>
+        <div class="space-y-1 text-sm">
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Descripción:</span>
+            <span class="text-gray-600">{{ fakeData.description }}</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="font-medium text-gray-800">Gastos:</span>
+            <span class="text-gray-600">{{ fakeData.expenses }}</span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <section>
-      <h2>Adicional</h2>
-      <div class="info-section">
-        <div class="info-item">
-          <span class="info-label">Descripción:</span>
-          <span class="info-value">{{ fakeData.description }}</span>
+      <!-- Gasto Total -->
+      <div class="p-4 border border-gray-200 rounded-md shadow-sm col-span-2">
+        <h2 class="text-lg font-semibold text-gray-700 border-b border-gray-300 pb-1 mb-2">Líquido por Viaje</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div>
+            <span class="block font-medium text-gray-800">GASTO TOTAL</span>
+            <div class="text-xl font-bold text-green-600 mt-1 text-center">
+              <span>{{ fakeData.gastoTotal }}</span>
+            </div>
+          </div>
+          <div>
+            <span class="block font-medium text-gray-800">LIQUIDO</span>
+            <div class="text-xl font-bold text-green-600 mt-1 text-center">
+              <span>{{ fakeData.netAmount }}</span>
+            </div>
+          </div>
         </div>
-        <div class="info-item">
-          <span class="info-label">Gastos:</span>
-          <span class="info-value">{{ fakeData.expenses }}</span>
-        </div>
-      </div>
-    </section>
-
-    <section>
-  <h2>Líquido por Viaje</h2>
-  <div style="display: flex; justify-content: space-between;">
-    <div>
-      GASTO TOTAL
-      <div class="net-amount">
-        <span>{{ fakeData.gastoTotal }}</span>
       </div>
     </div>
-    <div>
-      LIQUIDO
-      <div class="net-amount">
-        <span>{{ fakeData.netAmount }}</span>
-      </div>
-    </div>
-  </div>
-</section>
 
-    <button @click="printPage" class="btn-print">Imprimir</button>
+    <div class="flex justify-center mt-6">
+      <button @click="printPage" class="bg-blue-500 text-white py-2 px-6 rounded-md shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400">Imprimir</button>
+    </div>
   </div>
 </template>
 
@@ -139,7 +145,6 @@ export default {
         expenses: 400,
         netAmount: "$/180.00",
         gastoTotal: "$/180.00"
-
       }
     };
   },
@@ -150,97 +155,3 @@ export default {
   }
 };
 </script>
-
-<style scoped>
-.liquidation-container {
-  max-width: 500px;
-  max-height: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border-radius: 10px;
-  font-family: 'Arial', sans-serif;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.logo {
-  max-width: 100px;
-  margin-bottom: 10px;
-}
-
-.liquidation-container h1 {
-  color: #333;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-.liquidation-container h2 {
-  font-size: 1.2rem;
-  color: #666;
-  border-bottom: 1px solid #e0e0e0;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-}
-
-.info-section {
-  margin-bottom: 20px;
-}
-
-.info-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 8px;
-}
-
-.info-label {
-  font-weight: bold;
-  color: #333;
-}
-
-.info-value {
-  color: #555;
-}
-
-.net-amount {
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #4caf50;
-  text-align: center;
-  margin-top: 15px;
-}
-
-.btn-print {
-  margin-top: 20px;
-  padding: 8px 16px;
-  background-color: #921111;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  transition: background-color 0.3s ease;
-}
-
-.btn-print:hover {
-  background-color: #a40707;
-}
-
-@media print {
-  body * {
-    visibility: hidden;
-  }
-  .liquidation-container, .liquidation-container * {
-    visibility: visible;
-  }
-
-  .btn-print {
-    display: none; /* Ocultar botón de imprimir en la impresión */
-  }
-}
-</style>
