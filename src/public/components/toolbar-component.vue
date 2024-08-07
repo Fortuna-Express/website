@@ -4,8 +4,8 @@
       <img 
         src="/assets/fort.png" 
         alt="Fortuna Express S.A.C Logo" 
-        class="sm:w-80 md:w-80 lg:w-2  justify-center"
-        @click="toggleMenu"
+        class="sm:w-80 md:w-4 lg:w-2  justify-center "
+        @click="toggleMenu"  
       />
 
     <!-- Menú hamburguesa (visible en pantallas pequeñas) -->
