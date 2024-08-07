@@ -4,7 +4,7 @@
       <img 
         src="/assets/fort.png" 
         alt="Fortuna Express S.A.C Logo" 
-        class="sm:w-80 md:w-4 lg:w-2  justify-center "
+        class="w-80 sm:w-80 md:w-48 lg:w-48"
         @click="toggleMenu"  
       />
 

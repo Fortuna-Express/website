@@ -9,3 +9,7 @@
   .btn-primary:hover {
     @apply transform -translate-y-1;
 }
+.form-input {
+  
+  @apply py-2 px-4 border-b rounded-sm text-gray-900 h-10 w-full bg-gray-100;
+}

@@ -41,10 +41,14 @@ module.exports = {
         '72': '18rem',
         '80': '20rem',
         '96': '24rem',
-      }
+      },
+      colors: {
+        'bg-gray-100': '#f56565',
+        // otros colores
+      },
     },
     screens: {
-      'sm': '428px', // Tamaño pequeño
+      'sm': '425px', // Tamaño pequeño
       'md': '768px', // Tamaño mediano
       'lg': '1024px', // Tamaño grande
       'xl': '1280px', // Extra grande
@@ -54,5 +58,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('tailwindcss'),
+    require('autoprefixer'),
   ],
 };

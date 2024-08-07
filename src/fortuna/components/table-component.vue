@@ -1,131 +1,114 @@
 <template>
-  <div class="form-wrapper px-4">
-    <form @submit.prevent="submitForm" class="container">
-         <div class="form-group">
-            <label for="date">Fecha</label>
-            <input id="date" type="date" v-model="formData.date" class="input-field">
-          </div>
-      <!-- Sección: GUÍA REMITENTE -->
-      <fieldset class="fieldset">
-        <legend class="legend">GUIA</legend>
-        <div class="form-group">
-          <label for="remission">Nº G. Remisión</label>
-          <input id="remission" type="text" v-model="formData.remission" class="input-field">
-        </div>
-        <div class="form-group mt-4">
-          <label for="transportGuide">Nº G. Transportista</label>
-          <input id="transportGuide" type="text" v-model="formData.transportGuide" class="input-field">
-        </div>
-        <div class="form-group mt-4">
-          <label for="transportGuide">Nº G. Transportista 2</label>
-          <input id="transportGuide2" type="text" v-model="formData.transportGuide2" class="input-field">
-        </div>
-        <div class="form-group mt-4">
-          <label for="factura">Factura</label>
-          <input id="factura" type="text" v-model="formData.factura" class="input-field">
-        </div>
-        
-      </fieldset>
-      <!-- Sección: INFORMACIÓN REQUERIDA -->
-      <fieldset class="fieldset">
-        <legend class="legend">INFORMACIÓN REQUERIDA</legend>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="vehicle">Vehículo</label>
-            <select id="vehicle" v-model="formData.vehicle" class="input-field">
-              <option value="B7A-714">B7A-714</option>
-              <option value="C3W-837">C3W-837</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="driver">Conductor</label>
-            <input id="driver" type="text" v-model="formData.driver" class="input-field">
-          </div>
-          <div class="form-group">
-            <label for="date">Fecha</label>
-            <input id="date" type="date" v-model="formData.date" class="input-field">
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="departure">Salida</label>
-            <input id="departure" type="time" v-model="formData.departure" class="input-field">
-          </div>
-          <div class="form-group">
-            <label for="arrival">Llegada</label>
-            <input id="arrival" type="time" v-model="formData.arrival" class="input-field">
-          </div>
-        </div>
-      </fieldset>
+  <h1 class="px-6 text-3xl font-bold mt-4 text-center lg:text-left" >LIQUIDACIÓN</h1>
+    <form @submit.prevent="submitForm" class="container mx-auto">
+      <div class="flex sm:justify-center sm:items-center px-6 mt-5 border-2 border-red-700 rounded-md p-4">
 
-      <!-- Sección: DATOS COMPLEMENTARIOS -->
-      <fieldset class="fieldset">
-        <legend class="legend">DATOS COMPLEMENTARIOS</legend>
-        <div class="form-row">
-          <div class="form-group">
+      <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4">
+        <div class="flex flex-col justify-center">
+          <label for="date" class="form-label">Fecha</label>
+          <input id="date" type="date" v-model="formData.date" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col">
+          <label for="remission" class="form-label">Nº G. Remisión</label>
+          <input id="remission" type="text" v-model="formData.remission" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col">
+          <label for="transportGuide" class="form-label">Nº G. Transp.</label>
+          <input id="transportGuide" type="text" v-model="formData.transportGuide" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col">
+          <label for="transportGuide2" class="form-label">Nº G. Transp. 2</label>
+          <input id="transportGuide2" type="text" v-model="formData.transportGuide2" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col">
+          <label for="factura" class="form-label">Factura</label>
+          <input id="factura" type="text" v-model="formData.factura" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col">
+          <label for="vehicle" class="form-label">Vehículo</label>
+          <select id="vehicle" v-model="formData.vehicle" class="form-select bg-gray-100 rounded-sm w-full">
+            <option value="B7A-714">B7A-714</option>
+            <option value="C3W-837">C3W-837</option>
+          </select>
+        </div>
+      </div>
+      </div>
+    <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Información requerida</h2>
+
+      <div class="flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
+        <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
+          <div class="flex flex-col justify-center">
+          <label for="date">Fecha</label>
+          <input id="date" type="date" v-model="formData.date" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col justify-center">
+          <label for="departure">Salida</label>
+            <input id="departure" type="time" v-model="formData.departure" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <label for="arrival">Llegada</label>
+          <input id="arrival" type="time" v-model="formData.arrival" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col justify-center">
+          <label for="driver">Conductor</label>
+          <input id="driver" type="text" v-model="formData.driver" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+      </div>
+      </div>
+      <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left text-col" >Información complementarios</h2>
+      <div class="flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
+        <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
+          <div class="flex flex-col justify-center">
             <label for="fuel">Combustible</label>
-            <input id="fuel" type="number" v-model="formData.fuel" step="any" class="input-field">
-          </div>
-          <div class="form-group">
-            <label for="tarpaulin">Encarpar/Dsc</label>
-            <input id="tarpaulin" type="number" v-model="formData.tarpaulin" step="any" class="input-field">
-          </div>
-          <div class="form-group">
-            <label for="sweeper">Barrendero</label>
-            <input id="sweeper" type="number" v-model="formData.sweeper" step="any" class="input-field">
-          </div>
+            <input id="fuel" type="number" v-model="formData.fuel" step="any" class="form-input bg-gray-100 rounded-sm w-full">
         </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="driver_pay">Conductor-Pay</label>
-            <input id="driver_pay" type="number" v-model="formData.driverPay" step="any" class="input-field">
-          </div>
-          <div class="form-group">
-            <label for="guard">Guardianía</label>
-            <input id="guard" type="number" v-model="formData.guard" step="any" class="input-field">
-          </div>
-          <div class="form-group">
-            <label for="freight">Flete</label>
-            <input id="freight" type="number" v-model="formData.freight" step="any" class="input-field">
-          </div>
+        <div class="flex flex-col justify-center">
+          <label for="tarpaulin">Encarpar/Dsc</label>
+            <input id="tarpaulin" type="number" v-model="formData.tarpaulin" step="any" class="form-input bg-gray-100 rounded-sm w-full">
         </div>
-      </fieldset>
 
-      <!-- Sección: ADICIONAL -->
-      <fieldset class="fieldset">
-        <legend class="legend">ADICIONAL</legend>
-        <div class="form-row">
-          <div class="form-group">
+        <div class="flex flex-col justify-center">
+          <label for="sweeper">Barrendero</label>
+          <input id="sweeper" type="number" v-model="formData.sweeper" step="any" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col justify-center">
+          <label for="driver_pay">Conductor-Pay</label>
+            <input id="driver_pay" type="number" v-model="formData.driverPay" step="any" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+        <div class="flex flex-col justify-center">
+          <label for="guard">Guardianía</label>
+          <input id="guard" type="number" v-model="formData.guard" step="any" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+
+        <div class="flex flex-col justify-center">
+          <label for="freight">Flete</label>
+            <input id="freight" type="number" v-model="formData.freight" step="any" class="form-input bg-gray-100 rounded-sm w-full">
+        </div>
+      </div>
+      </div>
+
+      <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Información Adicional</h2>
+      <div class="flex sm:justify-center sm:items-center px-6 mt-2 border-2 border-red-700 rounded-md p-4">
+        <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
+          <div class="flex flex-col justify-center">
             <label for="description">Descripción</label>
-            <textarea id="description" v-model="formData.description" class="input-field"></textarea>
-          </div>
-          <div class="form-group">
-            <label for="expenses">Gastos</label>
-            <input id="expenses" type="number" v-model="formData.expenses" step="any" class="input-field">
-          </div>
+            <textarea id="description" v-model="formData.description" class="form-input bg-gray-100 rounded-sm w-full h-24"></textarea>
         </div>
-      </fieldset>
-
-      <!-- LÍQUIDO POR VIAJE -->
-      <fieldset class="fieldset">
-        <legend class="legend">TOTAL</legend>
-        <div class="form-row">
-          <div class="form-group">
-            <a>GASTO TOTAL</a>
-            <span id="net-amount" class="net-amount">{{ calculateNetAmount() }}</span>
-            <a>LIQUIDO POR VIAJE</a>
-            <span id="net-amount" class="net-amount">{{ calculateNetAmount() }}</span>
-          </div>
+        <div class="flex flex-col justify-center">
+          <label for="expenses">Gastos</label>
+          <input id="expenses" type="number" v-model="formData.expenses" step="any" class="form-input bg-gray-100 rounded-sm w-full">
         </div>
-      </fieldset>
+      </div>
+      </div>
 
-     
-      <!-- Botón de enviar -->
-      <button type="submit" class="btn-submit">Enviar</button>
     </form>
-  </div>
+    
+    <!-- Botón de enviar -->
+    <div class="flex justify-center mt-6">
+        <button type="submit" class="btn-primary">Enviar</button>
+      </div>
 </template>
-
 <script>
 export default {
   data() {
@@ -179,83 +162,5 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f9fafb;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.fieldset {
-  margin-bottom: 15px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 10px;
-}
-
-.legend {
-  font-size: 1rem;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #333;
-}
-
-.form-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.form-group {
-  flex: 1;
-  min-width: 200px;
-}
-
-.input-field {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.btn-submit {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #700c0c;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.btn-submit:hover {
-  background-color: #ac1f1f;
-}
-
-.net-amount {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #4caf50;
-  display: block;
-  margin-top: 10px;
-}
-
-@media (max-width: 768px) {
-  .container {
-    padding: 10px;
-  }
-}
 </style>
