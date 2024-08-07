@@ -1,7 +1,7 @@
 <template>
   <h1 class="px-6 text-3xl font-bold mt-4 text-center lg:text-left" >LIQUIDACIÓN</h1>
     <form @submit.prevent="submitForm" class="container mx-auto">
-      <div class="flex sm:justify-center sm:items-center px-6 mt-5 border-2 border-red-700 rounded-md p-4">
+      <div class="sm:flex sm:justify-center sm:items-center px-6 mt-5 border-2 border-red-700 rounded-md p-4">
 
       <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4">
         <div class="flex flex-col justify-center">
