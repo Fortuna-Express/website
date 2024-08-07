@@ -4,29 +4,29 @@
       <img 
         src="/assets/fort.png" 
         alt="Fortuna Express S.A.C Logo" 
-        class="md:w-80 lg:w-3 sm:w-80 justify-center"
+        class="sm:w-80 md:w-80 lg:w-2  justify-center"
         @click="toggleMenu"
       />
 
     <!-- Menú hamburguesa (visible en pantallas pequeñas) -->
     <button 
-      class="lg:hidden p-2"
+      class="sm:hidden p-2"
       @click="toggleMenu"
     >
    
     </button>
 
     <!-- Menú principal (visible en pantallas md y lg) -->
-    <div class="hidden md:flex gap-4">
-      <a href="/monitoring" class="text-2xl font-roboto font-semibold mt-2 underline">Monitero</a>
+    <div class="hidden sm:flex gap-4">
+      <a href="/monitoring" class="lg:text-xl md:text-md  font-semibold mt-1 underline">Monitero</a>
       <div>
-        <button class="btn-primary ">Admin</button>
+        <button class="btn-primary">Admin</button>
       </div>
     </div>
 
     <!-- Menú desplegable (oculto por defecto) -->
     <div v-if="isMenuOpen"  
-    class="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white p-4 shadow-lg w-64 md:w-auto lg:hidden z-50 text-center sm:px-4 rounded-lg border border-gray-200"
+    class=" md:hidden absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white p-4 shadow-lg w-64 md:w-auto lg:hidden z-50 text-center sm:px-4 rounded-lg border border-gray-200"
     >
     
     
