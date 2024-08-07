@@ -35,7 +35,7 @@
       </div>
     <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Información requerida</h2>
 
-      <div class="flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
+      <div class="sm:flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
         <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
           <div class="flex flex-col justify-center">
           <label for="date">Fecha</label>
@@ -57,7 +57,7 @@
       </div>
       </div>
       <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left text-col" >Información complementarios</h2>
-      <div class="flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
+      <div class="sm:flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
         <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
           <div class="flex flex-col justify-center">
             <label for="fuel">Combustible</label>
