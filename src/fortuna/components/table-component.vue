@@ -1,5 +1,6 @@
 <template>
-  <h1 class="px-6 text-3xl font-bold mt-4 text-center lg:text-left" >LIQUIDACIÓN</h1>
+  <div class="px-5">
+  <h1 class="text-3xl font-bold mt-4 text-center lg:text-left" >LIQUIDACIÓN</h1>
     <form @submit.prevent="submitForm" class="mx-auto">
       <div class="sm:flex sm:justify-center sm:items-center px-6 mt-5 border-2 border-red-700 rounded-md p-4">
 
@@ -124,8 +125,9 @@
 </div>
     <!-- Botón de enviar -->
     <div class="flex justify-center mt-6">
-        <button type="submitForm" class="btn-primary">Enviar</button>
+        <button type="submit" class="btn-primary">Enviar</button>
       </div>
+    </div>
 </template>
 <script>
 export default {
