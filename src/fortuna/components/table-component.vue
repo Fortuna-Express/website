@@ -2,7 +2,7 @@
   <div class="px-5">
   <h1 class="text-3xl font-bold mt-4 text-center lg:text-left" >LIQUIDACIÓN</h1>
     <form @submit.prevent="submitForm" class="mx-auto">
-      <div class="sm:flex sm:justify-center sm:items-center px-6 mt-5 border-2 border-red-700 rounded-md p-4">
+      <div class="sm:flex justify-center sm:items-center px-6 mt-5 border-2 border-red-700 rounded-md p-4">
 
       <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4">
         <div class="flex flex-col justify-center">
@@ -36,7 +36,7 @@
       </div>
     <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Información requerida</h2>
 
-      <div class="sm:flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
+      <div class="sm:flex justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
         <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
           <div class="flex flex-col justify-center">
           <label for="date">Fecha</label>
@@ -57,8 +57,8 @@
         </div>
       </div>
       </div>
-      <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left text-col" >Información complementarios</h2>
-      <div class="sm:flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
+      <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left text-col" >Información complementaria</h2>
+      <div class="sm:flex justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
         <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
           <div class="flex flex-col justify-center">
             <label for="fuel">Combustible</label>
@@ -89,8 +89,8 @@
       </div>
       </div>
 
-      <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Información Adicional</h2>
-      <div class="sm:flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
+      <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Información adicional</h2>
+      <div class="sm:flex justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4">
         <div class="space-y-2 md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
           <div class="flex flex-col justify-center">
             <label for="description">Descripción</label>
@@ -105,8 +105,8 @@
 
     </form>
     <h2 class="text-2xl text-gray-800 mt-4 text-center lg:text-left" >Total</h2>
-    <div class="sm:flex sm:justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4 mx-auto">
-    <div class="mt-4">
+    <div class="sm:flex justify-center sm:items-center px-6 mt-2 border-2  border-red-700 rounded-md p-4 mx-auto">
+    <div>
     <div class="flex flex-col space-y-2">
       <div class="flex justify-between items-center">
         <span class="font-medium text-gray-600 ml-2">GASTO TOTAL</span>

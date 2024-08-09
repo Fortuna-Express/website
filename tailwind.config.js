@@ -48,7 +48,7 @@ module.exports = {
       },
     },
     screens: {
-      'sm': '425px', // Tamaño pequeño
+      'sm': {'min': '320px', 'max': '425px'}, // Rango para pantallas pequeñas
       'md': '768px', // Tamaño mediano
       'lg': '1024px', // Tamaño grande
       'xl': '1280px', // Extra grande
