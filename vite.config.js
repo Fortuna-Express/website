@@ -1,7 +1,9 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
-})
+  css: {
+    postcss: './postcss.config.js', // Apunta a tu archivo de configuración de PostCSS
+  },
+});

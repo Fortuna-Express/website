@@ -8,8 +8,9 @@ export default defineComponent({
 </script>
 
 <template>
-  <toolbar-component></toolbar-component>
 
-  <router-view/>
+
+  <toolbar-component></toolbar-component>
+<router-view/> 
 
 </template>

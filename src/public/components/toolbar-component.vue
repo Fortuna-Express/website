@@ -1,41 +1,34 @@
 <template>
-  <div class="flex items-center justify-between px-4 py-2 bg-700 relative">
+  
+  <nav class="bg-white shadow p-4">
+  <div class="container mx-auto flex justify-between items-center">
+    
     <!-- Logo -->
-      <img 
-        src="/assets/fort.png" 
-        alt="Fortuna Express S.A.C Logo" 
-        class="w-80 sm:w-80 md:w-48 lg:w-48"
-        @click="toggleMenu"  
-      />
-
-    <!-- Menú hamburguesa (visible en pantallas pequeñas) -->
-    <button 
-      class="sm:hidden p-2"
-      @click="toggleMenu"
-    >
-   
-    </button>
-
-    <!-- Menú principal (visible en pantallas md y lg) -->
-    <div class="hidden sm:flex gap-4">
-      <a href="/monitoring" class="lg:text-xl md:text-md  font-semibold mt-1 underline">Monitero</a>
-      <div>
-        <button class="btn-primary">Admin</button>
-      </div>
+    <div class="flex items-center">
+      <img class="h-16 w-auto" src="/assets/fort.png" alt="Company Logo">
     </div>
 
-    <!-- Menú desplegable (oculto por defecto) -->
-    <div v-if="isMenuOpen"  
-    class=" md:hidden absolute top-full left-1/2 transform -translate-x-1/2 mt-2 bg-white p-4 shadow-lg w-64 md:w-auto lg:hidden z-50 text-center sm:px-4 rounded-lg border border-gray-200"
-    >
-    
-    
-    <a href="/monitoring" class="block text-sm font-roboto font-semibold mt-2 underline">Monitero</a>
-      <div class="mt-2">
-        <button class="btn-primary  py-1 px-2 text-xs">Admin</button>
-      </div>
+    <div class="hidden lg:flex space-x-8">
+      <a href="#" class="inline-flex items-center border-b-2 border-transparent px-3  text-xl font-medium text-black hover:border-red-500 hover:text-gray-800 focus:outline-none focus:border-gray-500">
+        Monitero
+      </a>
+      <a href="#" class="inline-flex items-center border-b-2 border-transparent px-3 text-xl font-medium text-black hover:border-red-500 hover:text-gray-800 focus:outline-none focus:border-gray-500">
+        Admin
+      </a>
     </div>
+
   </div>
+
+ 
+</nav>
+
+
+
+
+
+
+
+
 </template>
 
 <script>
@@ -54,6 +47,3 @@ export default {
 };
 </script>
 
-<style scoped>
-/* Agrega estilos si es necesario */
-</style>
