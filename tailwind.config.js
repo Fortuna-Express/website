@@ -4,7 +4,11 @@ module.exports = {
     './src/**/*.{vue,js,ts,jsx,tsx}', // Para buscar clases en archivos .vue, .js, .ts, etc.
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        primary: '#b91c1c', // Color rojo para el botón primary
+      },
+    },
   },
   plugins: [],
 };
