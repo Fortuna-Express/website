@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col sm:flex-col md:flex-row lg:flex-row justify-center mt-12 gap-8 items-center md:px-4 px-0 lg:py-20 py-0 mb-12">
+  <div class="flex flex-col sm:flex-col md:flex-row lg:flex-row justify-center mt-12 gap-8 items-center md:px-4 px-0 lg:py-24 py-0 mb-24">
     <!-- GPS Card -->
     <div class="w-64 h-60 border-4 border-primary rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
   <div class="p-4 h-full flex flex-col justify-between">
@@ -16,7 +16,7 @@
     
     <!-- Sección 3: Enlaces -->
     <div class= "flex justify-between ">
-      <a href="https://cloud.securitasfleet.com/visitor/bf71a8a1-7196-4d64-bbad-83fc2bac76d2/assets" target="_blank" class="inline-block bg-primary hover:bg-red-500 text-white  px-3 rounded-md text-sm shadow-md transition-colors duration-300">
+      <a href="https://cloud.securitasfleet.com/visitor/317bdd31-6e48-4d71-b5f9-d273767ffffb/assets" target="_blank" class="inline-block bg-primary hover:bg-red-500 text-white py-1 px-3 rounded-md text-sm shadow-md transition-colors duration-300">
         B7A-714
       </a>
       <a href="https://cloud.securitasfleet.com/visitor/317bdd31-6e48-4d71-b5f9-d273767ffffb/assets" target="_blank" class="inline-block bg-primary hover:bg-red-500 text-white py-1 px-3 rounded-md text-sm shadow-md transition-colors duration-300">
@@ -44,4 +44,5 @@
       </div>
     </a>
   </div>
+  
 </template>
