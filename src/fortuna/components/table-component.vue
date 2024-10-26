@@ -7,27 +7,27 @@
       <div class="md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4">
         <div class="flex flex-col justify-center">
           <label for="date" class="form-label">Fecha</label>
-          <input id="date" type="date" v-model="formData.date" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="date" type="date" v-model="formData.date" class="form-input">
         </div>
         <div class="flex flex-col">
           <label for="remission" class="form-label">Nº G. Remisión</label>
-          <input id="remission" type="text" v-model="formData.remission" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="remission" type="text" v-model="formData.remission" class="form-input ">
         </div>
         <div class="flex flex-col">
           <label for="transportGuide" class="form-label">Nº G. Transp.</label>
-          <input id="transportGuide" type="text" v-model="formData.transportGuide" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="transportGuide" type="text" v-model="formData.transportGuide" class="form-input">
         </div>
         <div class="flex flex-col">
           <label for="transportGuide2" class="form-label">Nº G. Transp. 2</label>
-          <input id="transportGuide2" type="text" v-model="formData.transportGuide2" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="transportGuide2" type="text" v-model="formData.transportGuide2" class="form-input">
         </div>
         <div class="flex flex-col">
           <label for="factura" class="form-label">Factura</label>
-          <input id="factura" type="text" v-model="formData.factura" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="factura" type="text" v-model="formData.factura" class="form-input">
         </div>
         <div class="flex flex-col">
           <label for="vehicle" class="form-label">Vehículo</label>
-          <select id="vehicle" v-model="formData.vehicle" class="form-select bg-gray-100 rounded-sm w-full h-8 px-2">
+          <select id="vehicle" v-model="formData.vehicle" class="form-select">
             <option value="B7A-714">B7A-714</option>
             <option value="C3W-837">C3W-837</option>
           </select>
@@ -40,20 +40,20 @@
         <div class=" md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
           <div class="flex flex-col justify-center">
           <label for="date">Fecha</label>
-          <input id="date" type="date" v-model="formData.date" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="date" type="date" v-model="formData.date" class="form-input">
         </div>
         <div class="flex flex-col justify-center">
           <label for="departure">Salida</label>
-            <input id="departure" type="time" v-model="formData.departure" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+            <input id="departure" type="time" v-model="formData.departure" class="form-input">
         </div>
 
         <div class="flex flex-col justify-center">
           <label for="arrival">Llegada</label>
-          <input id="arrival" type="time" v-model="formData.arrival" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="arrival" type="time" v-model="formData.arrival" class="form-input">
         </div>
         <div class="flex flex-col justify-center">
           <label for="driver">Conductor</label>
-          <input id="driver" type="text" v-model="formData.driver" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="driver" type="text" v-model="formData.driver" class="form-input">
         </div>
       </div>
       </div>
@@ -62,29 +62,29 @@
         <div class=" md:grid md:grid-cols-2 lg:grid-cols-6 md:gap-4 lg:flex">
           <div class="flex flex-col justify-center">
             <label for="fuel">Combustible</label>
-            <input id="fuel" type="number" v-model="formData.fuel" step="any" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+            <input id="fuel" type="number" v-model="formData.fuel" step="any" class="form-input">
         </div>
         <div class="flex flex-col justify-center">
           <label for="tarpaulin">Encarpar/Dsc</label>
-            <input id="tarpaulin" type="number" v-model="formData.tarpaulin" step="any" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+            <input id="tarpaulin" type="number" v-model="formData.tarpaulin" step="any" class="form-input">
         </div>
 
         <div class="flex flex-col justify-center">
           <label for="sweeper">Barrendero</label>
-          <input id="sweeper" type="number" v-model="formData.sweeper" step="any" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="sweeper" type="number" v-model="formData.sweeper" step="any" class="form-input">
         </div>
         <div class="flex flex-col justify-center">
           <label for="driver_pay">Conductor-Pay</label>
-            <input id="driver_pay" type="number" v-model="formData.driverPay" step="any" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+            <input id="driver_pay" type="number" v-model="formData.driverPay" step="any" class="form-input">
         </div>
         <div class="flex flex-col justify-center">
           <label for="guard">Guardianía</label>
-          <input id="guard" type="number" v-model="formData.guard" step="any" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+          <input id="guard" type="number" v-model="formData.guard" step="any" class="form-input">
         </div>
 
         <div class="flex flex-col justify-center">
           <label for="freight">Flete</label>
-            <input id="freight" type="number" v-model="formData.freight" step="any" class="form-input bg-gray-100 rounded-sm w-full h-8 px-2">
+            <input id="freight" type="number" v-model="formData.freight" step="any" class="form-input">
         </div>
       </div>
       </div>

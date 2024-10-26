@@ -6,7 +6,7 @@
       
   
           <!-- Sección de derechos reservados -->
-          <div class="text-sm mx-auto text-center">
+          <div class="text-sm mx-auto text-center p-4">
             &copy; Rodrigo Aguilar Castillo. Todos los derechos reservados.
           </div>
   
